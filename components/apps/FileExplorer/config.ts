@@ -1,1 +1,1 @@
-export const ROOT_NAME = "My PC";
+export const ROOT_NAME = "Wrath-Cyber's PC";
