@@ -1,3 +1,4 @@
+import { commands as gitCommands } from "components/apps/Terminal/processGit";
 import type { LocalEcho } from "components/apps/Terminal/types";
 
 export const help = (
@@ -76,6 +77,29 @@ export const aliases: Record<string, string[]> = {
   weather: ["wttr"],
 };
 
+const directoryCommands = new Set([
+  "cat",
+  "cd",
+  "chdir",
+  "copy",
+  "cp",
+  "del",
+  "dir",
+  "erase",
+  "ls",
+  "md",
+  "mkdir",
+  "move",
+  "mv",
+  "rd",
+  "ren",
+  "rename",
+  "rm",
+  "rmdir",
+  "touch",
+  "type",
+]);
+
 export const unknownCommand = (baseCommand: string): string =>
   `'${baseCommand}' is not recognized as an internal or external command, operable program or batch file.`;
 
@@ -87,9 +111,15 @@ export const autoComplete = (
 
   handlers.forEach(({ fn }) => localEcho.removeAutocompleteHandler(fn));
 
-  localEcho.addAutocompleteHandler((index: number): string[] =>
-    index === 0 ? Object.keys(commands) : directory || []
-  );
+  localEcho.addAutocompleteHandler((index: number, [command]): string[] => {
+    if (index === 0) return Object.keys(commands);
+    if (index === 1) {
+      if (directoryCommands.has(command)) return directory;
+      if (command === "git") return Object.keys(gitCommands);
+    }
+
+    return [];
+  });
 };
 
 export const parseCommand = (commandString: string): string[] => {
