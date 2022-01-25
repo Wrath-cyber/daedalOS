@@ -1,8 +1,7 @@
-## 🌌 **daedalOS** 🌌
+##**daedalOS**
 
 ### _Desktop environment in the browser_
 
-![Stars](https://badgen.net/github/stars/DustinBrett/x)
 ![License](https://badgen.net/github/license/DustinBrett/x)
 
 # Demo ⚡
