@@ -13,7 +13,7 @@ const isWebGLAvailable = typeof WebGLRenderingContext !== "undefined";
 
 const libs = [
   "/System/Vanta.js/three.min.js",
-  "/System/Vanta.js/vanta.dots.min.js",
+  "/System/Vanta.js/vanta.waves.min.js",
 ];
 
 const vantaWaves =
