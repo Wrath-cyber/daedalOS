@@ -1,0 +1,5 @@
+Hi! I have been a student programmer for 3 years. 
+I have a passion for learning and developing. 
+
+Currently, I am familiar with React, Typescript, Javascript, C++, Java, SQL. 
+https://github.com/Wrath-cyber
