@@ -4,11 +4,10 @@ out
 
 public/robots.txt
 public/.index/fs.*
-public/Users/Public/**
 
 
 !public/Users/Public/Desktop/AboutMe
-!public/Users/Public/Desktop/AboutMe/*.txt\
+!public/Users/Public/Desktop/AboutMe/*.txt
 !public/Users/**/desktop.ini
 !public/Users/Public/Desktop
 !public/Users/Public/Desktop/My PC.url
