@@ -12,9 +12,6 @@ public class Advance extends Ticket {
         else
         return 30;
     }
-    public String toString() {
-        return "Number: " + super.serialNumber + "\nPrice: " + getPrice();
-    }
 
     public int getDaysInAdvance() {
         return daysInAdvance;
